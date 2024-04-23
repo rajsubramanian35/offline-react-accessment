@@ -6,6 +6,9 @@ export default function Username({userNameOnChange, name}) {
   const [username, setUsername] = useState(name)
   const [isUsernameValid, setIsUsernameValid] = useState(null)
   
+  // Handles username input
+  // validates the give username and show appropriate message
+  // makes sure the validation is against the latest value and avoid race condition during user typing
   function handleUsernameChange(e) {
     function validationCallback(boundUsername, isBoundUsernameValid) {
       if (boundUsername === usernameRef.current.value) {
@@ -29,6 +32,8 @@ export default function Username({userNameOnChange, name}) {
       <div className="flexContainer posRelative">
         <input onChange={handleUsernameChange} value={username} placeholder="Choose your username" autoComplete="off" id="username" name="username" type="text" ref={usernameRef} />
         <div className="usernameMsg">
+          {/* Choice is made here to show both error and success message to reward the user upon success */}
+          {/* Choice is made to improve the error message and added icons for visual treat */}
           {username && isUsernameValid === true && (<div className="usernameAvailable">✓ {username} is available!!! </div>)}
           {username && isUsernameValid === false && (<div className="usernameNotAvailable">✖ {username} has already been taken </div>)}
         </div>
