@@ -84,18 +84,27 @@ select, input {
 .userTable thead {
   background-color: #f4fafd;
 }
-.userTable th {
+.userTable :is(th, td) {
   padding: 5px;
   text-align: left;
 }
+.userTable td:not(:last-child) {
+  border-right: solid black 1px;
+}
 .userTable th:not(:last-child) {
   border-right: solid black 1px;
+}
+.userTable tbody tr:nth-child(odd) {
+  background-color: beige;
+}
+.userTable tbody tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .textAlignCenter {
   text-align: center;
 }
-.emptyTableMsg {
+td.emptyTableMsg {
   padding: 1rem;
   text-align: center;
   font-size: 1.5rem;
