@@ -1,23 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="formGridContainer">
+      <form className="formGrid">
+          <label htmlFor="username" >Name</label>
+          <input id="username" name="username" type="text" placeholder="choose your username" />
+          <label htmlFor="user-location">Location</label>
+          <select id="user-location" name="user-location">
+            <option>
+              Canada
+            </option>
+            <option>
+              China
+            </option>
+            <option>
+              USA
+            </option>
+            <option>
+              Brazil
+            </option>
+          </select>
+        <div className="buttonsContainer">
+          <button className="secondaryBtn marginRightXL">Clear Table</button>
+          <button className="primaryBtn">Add to Table</button>
+        </div>
+      </form>
+      <table className="userTable" cellPadding="0" cellSpacing="0"><thead>
+            <tr>
+              <th scope="col">
+                Name
+              </th>
+              <th scope="col">
+                Location
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colSpan="2" className="emptyTableMsg">
+                Trying adding usernames to this table
+              </td>
+            </tr>
+          </tbody>
+        </table>
     </div>
   );
 }
