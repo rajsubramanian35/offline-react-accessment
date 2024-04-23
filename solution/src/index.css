@@ -28,14 +28,14 @@ select, input {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas: "namelabel name" "locationlabel location" "buttons buttons";
-  row-gap: 2rem;
+  row-gap: 2.5rem;
   column-gap: .5rem;
   align-items: center;
 }
-.formGrid > label {
+.formGrid > .formlabel {
   text-align: right;
 }
-.formGrid > :is(input, select) {
+.formGrid :is(input, select) {
   line-height: 1.2rem;
   padding: .5rem;
 }
@@ -101,4 +101,24 @@ select, input {
   font-size: 1.5rem;
   height: 10rem;
   border-top: solid 1px black;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+}
+.posRelative {
+  position: relative;
+}
+
+.usernameMsg {
+  position: absolute;
+  top: 45px;
+}
+.usernameAvailable {
+  color: green;
+  font-weight: bold;
+}
+.usernameNotAvailable {
+  color: #F35324;
+  font-weight: bold;
 }

@@ -18,12 +18,16 @@ export default function UserLocation() {
   }, [])
 
   return (
-    <select id="user-location" name="user-location">
-      {countries.map(country => {
-        return <option value={country} id={country}>
-          {country}
-        </option>
-      })}
-    </select>
+    <>
+      <label htmlFor="user-location" className='formlabel'>Location</label>
+      <select id="user-location" name="user-location">
+        {countries.map(country => {
+          return <option value={country} key={country} id={country}>
+            {country}
+          </option>
+        })}
+      </select>
+    </>
+
   )
 }
