@@ -1,13 +1,12 @@
 import './App.css';
 import UserLocation from './UserLocation';
+import Username from './Username';
 
 function App() {
   return (
     <div className="formGridContainer">
       <form className="formGrid">
-        <label htmlFor="username" >Name</label>
-        <input id="username" name="username" type="text" placeholder="choose your username" />
-        <label htmlFor="user-location">Location</label>
+        <Username />
         <UserLocation />
         <div className="buttonsContainer">
           <button className="secondaryBtn marginRightXL">Clear Table</button>
