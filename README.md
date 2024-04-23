@@ -1,3 +1,6 @@
+## Demo of solution
+1. Please refer to demo.mov for a short demo of the solution
+
 # react-interview-q1
 
 ## Instructions
@@ -15,3 +18,4 @@ Please build the following form component
 * Component should have a responsive layout
 * Component should be appropriately styled
 * Unit tests are not required
+
